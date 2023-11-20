@@ -76,6 +76,8 @@ figure {
   justify-content: space-between;
   padding-block-start: 20px;
   padding-block-end: 20px;
+  padding-inline-start: 5vw;
+  padding-inline-end: 5vw;
 }
 
 .header__theme-toggler {
@@ -97,6 +99,7 @@ figure {
   font-family: inherit;
   color: currentColor;
   cursor: pointer;
+  font-size: 18px;
   background-color: transparent;
 }
 
@@ -134,8 +137,8 @@ figure {
 }
 
 .content__title {
-  margin-block-start: 7%;
-  margin-block-end: 2.5%;
+  margin-block-start: 6.5%;
+  margin-block-end: 2%;
   font-size: 30px;
   line-height: normal;
 }
