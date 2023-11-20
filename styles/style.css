@@ -21,7 +21,6 @@
 }
 
 .page {
-  overflow-x: hidden;
   min-inline-size: 360px;
   margin: 0;
   color: var(--text-color);
@@ -69,12 +68,12 @@ figure {
 }
 
 .header__menu {
-  border-bottom: 1px solid var(--text-color);
-  border-top: 1px solid var(--text-color);
+  border-bottom: 1px solid currentColor;
+  border-top: 1px solid currentColor;
   display: flex;
-  inline-size: 100vw;
+  inline-size: 100%;
   justify-content: space-between;
-  padding: 20px 5vw 20px 5vw;
+  padding: 20px 0 20px 5vw;
 }
 
 .logo__link {
@@ -85,7 +84,7 @@ figure {
   display: flex;
   gap: 10px;
   position: relative;
-  right: -.5vw;
+  right: 4.5vw;
 }
 
 .nav-list {
@@ -111,13 +110,10 @@ figure {
   cursor: url(../images/image52.png),pointer;
 }
 
-.header__theme-button_is-active {
-  font-weight: 700;
-  position: relative;
-}
-
 .header__theme-button_is-active:disabled {
   pointer-events: none;
+  font-weight: 700;
+  position: relative;
 }
 
 .header__theme-button_is-active::after {
@@ -132,19 +128,14 @@ figure {
 }
 
 .theme_dark .header__theme-button_is-active::after {
-  content: "";
   background-image: url(../images/pattern.svg);
-  position: absolute;
-  z-index: -1;
-  right: 3px;
-  bottom: 4px;
 }
 
 .content__title {
-  margin-block-start: 6.5%;
-  margin-block-end: 2.1%;
+  margin-block-start: 7%;
+  margin-block-end: 2.5%;
   font-size: 30px;
-  line-height: normal;
+  line-height: 90%;
 }
 
 .content__text-block {
@@ -161,13 +152,15 @@ figure {
 div.content__text-block_type_first-lettered:nth-of-type(1n)::first-letter {
   background-color: var(--accent-color);
   display: inline-block;
-  padding: 0 3px 0 3px;
-  margin: 0 5px 0 0;
+  inline-size: 27px;
+  block-size: 33px;
+  padding: 0 4px 0 4px;
+  margin: 0 4px 0 0;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  font-size: 30px;
   font-weight: 700;
+  font-size: 30px;
 }
 
 .theme_dark div.content__text-block_type_first-lettered:nth-of-type(1n)::first-letter {
@@ -175,17 +168,20 @@ div.content__text-block_type_first-lettered:nth-of-type(1n)::first-letter {
 }
 
 .content__figure {
-  inline-size: 100vw;
-  margin-block-start: 7%;
-  margin-block-end: 7%;
+  inline-size: calc(100% + 10vw);
+  block-size: auto;
   position: relative;
+  padding: 0;
   left: -5vw;
+  margin: 7% 0 7% 0;
   border-bottom: 1px solid currentColor;
 }
 
 .content__picture {
-  inline-size: 100vw;
+  inline-size: 100%;
+  block-size: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 .content__picture-caption {
@@ -231,8 +227,9 @@ a:hover {
 .content__card-subtitle {
   text-align: center;
   font-size: 18px;
-  font-weight: 400px;
+  font-weight: 400;
   line-height: normal;
+  font-style: normal;
 }
 
 .colored-text {
@@ -251,14 +248,6 @@ a:hover {
 }
 
 .theme_dark .colored-text::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  right: -4px;
-  bottom: 10px;
-  inline-size: 3.65em;
-  block-size: .25em;
-  background-color: var(--accent-color);
   background-image: url(../images/pattern.svg);
 }
 
@@ -278,32 +267,23 @@ li:not(:last-of-type, .nav-list) {
 li:not(.nav-list)::before {
   content: "";
   width: 15px;
-  height: 15px;
+  height: 100%;
   background-image: url(../images/marker-light.svg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 15px;
   background-position: center;
   position: absolute;
   left: -25px;
-  top: 1px;
+  top: auto;
 }
 
 .theme_dark li:not(.nav-list)::before {
-  content: "";
-  width: 15px;
-  height: 15px;
   background-image: url(../images/marker-dark.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  position: absolute;
-  left: -25px;
-  top: 1px;
 }
 
 .footer {
   border-top: 1px solid currentColor;
-  inline-size: 100vw;
+  inline-size: 100%;
   margin-block-start: 10%;
   padding-block-start: 2.5%;
   padding-block-end: 2.5%;
