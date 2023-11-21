@@ -73,7 +73,7 @@ figure {
   display: flex;
   inline-size: 100%;
   justify-content: space-between;
-  padding: 20px 0 20px 5vw;
+  padding: 20px 5vw 20px 5vw;
 }
 
 .logo__link {
@@ -82,9 +82,8 @@ figure {
 
 .header__theme-toggler {
   display: flex;
-  gap: 10px;
-  position: relative;
-  right: 4.5vw;
+  gap: 20px;
+  padding: 0;
 }
 
 .nav-list {
@@ -95,6 +94,7 @@ figure {
   line-height: 104%;
   font-style: normal;
   font-weight: 400;
+  padding: 0;
 }
 
 .header__theme-button {
@@ -104,6 +104,7 @@ figure {
   cursor: pointer;
   font-size: 18px;
   background-color: transparent;
+  padding: 0;
 }
 
 .header__theme-button:hover {
@@ -113,16 +114,16 @@ figure {
 .header__theme-button_is-active:disabled {
   pointer-events: none;
   font-weight: 700;
-  position: relative;
+  padding: 0;
 }
 
 .header__theme-button_is-active::after {
   content: "";
   position: absolute;
   z-index: -1;
-  right: 3px;
-  bottom: 4px;
-  inline-size: 4.5em;
+  right: -3.5px;
+  bottom: 2px;
+  inline-size: calc(100% + 7px);
   block-size: .33em;
   background-color: var(--accent-color);
 }
@@ -151,14 +152,11 @@ figure {
 
 div.content__text-block_type_first-lettered:nth-of-type(1n)::first-letter {
   background-color: var(--accent-color);
-  display: inline-block;
   inline-size: 27px;
   block-size: 33px;
   padding: 0 4px 0 4px;
-  margin: 0 4px 0 0;
+  margin: 0 4px 0 -4px;
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   font-weight: 700;
   font-size: 30px;
 }
@@ -274,7 +272,7 @@ li:not(.nav-list)::before {
   background-position: center;
   position: absolute;
   left: -25px;
-  top: auto;
+  top: 0;
 }
 
 .theme_dark li:not(.nav-list)::before {
